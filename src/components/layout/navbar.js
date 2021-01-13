@@ -38,8 +38,9 @@ export default function Navbar() {
     <Header showThis={headerShow}>
       <Img
         css={`
-          margin-left: 1.3rem;
+          margin-left: 1.5rem;
           @media ${device.tablet} {
+            margin-left: 1.5rem;
             width: 2.2rem !important;
             height: 2.2rem !important;
             margin-top: 0.3rem;
@@ -109,11 +110,11 @@ const ToggleMenu = styled.div`
     margin: 6px 0;
   } //Mobile Menu Icon
   @media ${device.tablet} {
-    display: block;
+    display: block; //El espacio total a la derecha debe de ser 1.1rem
     border-radius: 0.3rem;
     padding: 0.3rem 0.8rem;
     margin-right: 0.8rem;
-  } //El espacio total a la derecha debe de ser 1.1rem
+  }
 `
 const Navigation = styled.nav`
   padding-right: 0.5rem;
@@ -143,6 +144,7 @@ const Link = styled.li`
   display: inline-block;
   padding: 0 0.5rem;
   font-weight: 400;
+  cursor: pointer;
 
   @media ${device.tablet} {
     padding: 1.3rem;

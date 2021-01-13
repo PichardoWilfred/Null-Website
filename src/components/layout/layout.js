@@ -6,14 +6,13 @@ import PropTypes from "prop-types"
 
 const GlobalStyle = createGlobalStyle`
   * {
-    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
   }
-  main{
-    margin-top: 69px;
+  section{
+    padding: 1.5rem;
   }
 `
 

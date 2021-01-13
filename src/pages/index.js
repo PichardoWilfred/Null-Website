@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout/layout"
+import Portrait from "../components/sections/portrait"
 import SEO from "../components/seo"
 
 const IndexPage = () => {
@@ -11,6 +12,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Inicio" />
+      <Portrait />
       {sections}
     </Layout>
   )
