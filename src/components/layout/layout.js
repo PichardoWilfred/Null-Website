@@ -10,10 +10,14 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    
   }
   section{
-    padding: 1.5rem;
+    margin: 0;
+    font-size: clamp(14px, 4vw, 2.4rem);
   }
+
+  
 `
 
 const layout = ({ children }) => (
@@ -21,7 +25,7 @@ const layout = ({ children }) => (
     <GlobalStyle />
     <Navbar />
     <main>{children}</main>
-    <div className="footer"></div>
+    <footer></footer>
   </>
 )
 layout.propTypes = {

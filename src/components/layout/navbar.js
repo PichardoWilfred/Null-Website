@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
 import styled, { css } from "styled-components"
 import { device } from "./responsive/device"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import logo from "../../images/navbar/logo.svg"
+import { Link, animateScroll as scroll } from "react-scroll" //scrolling options
 
 export default function Navbar() {
   const [showNav, setShowNav] = useState(false) //toggle mobile navbar
@@ -17,36 +17,20 @@ export default function Navbar() {
 
       setPrevScrollPos(currentScrollPos)
     }
-    window.addEventListener("scroll", handleScroll) //Listen to scroll
+    window.addEventListener("scroll", handleScroll)
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [showNav, prevScrollPos, headerShow])
 
-  const data = useStaticQuery(graphql`
-    query {
-      image: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fixed(width: 40) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `) //Query logo
   return (
     <Header showThis={headerShow}>
-      <Img
-        css={`
-          margin-left: 1.5rem;
-          @media ${device.tablet} {
-            margin-left: 1.5rem;
-            width: 2.2rem !important;
-            height: 2.2rem !important;
-            margin-top: 0.3rem;
-          }
-        `}
-        fixed={data.image.childImageSharp.fixed}
+      <Logo
+        src={logo}
+        alt="Logo"
+        onClick={() => {
+          scroll.scrollToTop()
+        }}
       />
       <ToggleMenu onClick={() => setShowNav(!showNav)}>
         <div></div>
@@ -56,18 +40,30 @@ export default function Navbar() {
 
       <Navigation showThis={showNav}>
         <NavLinks>
-          <Link>
+          <NLink to="services" spy smooth offset={-70} duration={500}>
             <A>Servicios</A>
-          </Link>
-          <Link>
+          </NLink>
+          <NLink to="about" spy smooth offset={-70} duration={500}>
             <A>Nosotros</A>
+          </NLink>
+          <Link to="contact" spy smooth offset={-70} duration={500}>
+            <ContactButton>CONTÁCTANOS</ContactButton>
           </Link>
-          <ContactButton>CONTÁCTANOS</ContactButton>
         </NavLinks>
       </Navigation>
     </Header>
   )
 }
+
+const Logo = styled.img`
+  margin-left: 1.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  @media ${device.tablet} {
+    margin-top: 0.3rem;
+  }
+  cursor: pointer;
+`
 
 const hiddenHeader = css`
   visibility: hidden;
@@ -97,6 +93,7 @@ const Header = styled.header`
   @media ${device.tablet} {
     padding-top: 0.5rem;
   }
+  z-index: 1; //for the animation to not overlay the navbar
 `
 const ToggleMenu = styled.div`
   display: none;
@@ -140,7 +137,7 @@ const NavLinks = styled.ul`
     text-align: center;
   }
 `
-const Link = styled.li`
+const NLink = styled(Link)`
   display: inline-block;
   padding: 0 0.5rem;
   font-weight: 400;
@@ -192,7 +189,7 @@ const ContactButton = styled.button`
 
   background-color: white;
   color: black;
-  border: solid 1.5px #fff;
+  border: solid 1.5px black;
 
   margin-left: 1rem;
   padding: 0.7rem;
