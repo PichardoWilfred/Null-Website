@@ -2,19 +2,35 @@ import React from "react"
 import styled from "styled-components"
 import { device } from "../../layout/responsive/device"
 import Form from "./forms/form"
+//email-handler
+import emailjs from "emailjs-com"
 
 export default function Contact() {
   return (
     <Section id="contact">
       <Title>CONTÁCTANOS</Title>
-      <Form />
+      <Form handler={handleform} />
     </Section>
   )
 }
 
-//Contact email
-
-//Elements
+const handleform = (data, e) => {
+  emailjs
+    .sendForm(
+      "service_5b1kisi",
+      "template_4r48j9p",
+      e.target,
+      "user_t5yip53PAJkGwGOXpZlxf"
+    )
+    .then(
+      () => {
+        e.target.reset()
+      },
+      error => {
+        console.log("JeJe ", error.text)
+      }
+    )
+}
 const Section = styled.section`
   display: flex;
   flex-wrap: wrap;

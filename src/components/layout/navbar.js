@@ -41,10 +41,10 @@ export default function Navbar() {
       <Navigation showThis={showNav}>
         <NavLinks>
           <NLink to="services" spy smooth offset={-70} duration={500}>
-            <A>Servicios</A>
+            Servicios
           </NLink>
           <NLink to="about" spy smooth offset={-70} duration={500}>
-            <A>Nosotros</A>
+            Nosotros
           </NLink>
           <Link to="contact" spy smooth offset={-70} duration={500}>
             <ContactButton>CONTÁCTANOS</ContactButton>
@@ -137,6 +137,10 @@ const NavLinks = styled.ul`
     text-align: center;
   }
 `
+// Ul
+// Li
+// A
+
 const NLink = styled(Link)`
   display: inline-block;
   padding: 0 0.5rem;
@@ -149,8 +153,8 @@ const NLink = styled(Link)`
     width: 100%;
     border-top: 1px solid white;
   }
-`
-const A = styled.a`
+
+  //Aditional styles
   text-decoration: none;
   color: white;
 
@@ -158,7 +162,7 @@ const A = styled.a`
     transition: all 0.2s;
     background-color: #222222;
   }
-  //feature this only on Desktop
+
   @media (min-width: 768px) {
     &::after {
       content: " ";
