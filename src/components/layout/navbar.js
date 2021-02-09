@@ -137,9 +137,6 @@ const NavLinks = styled.ul`
     text-align: center;
   }
 `
-// Ul
-// Li
-// A
 
 const NLink = styled(Link)`
   display: inline-block;

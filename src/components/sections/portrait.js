@@ -1,7 +1,6 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import portrait from "../../images/portrait/portrait_bg.svg"
-
 export default function Portrait() {
   return (
     <>

@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Null Systems`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@null.systems.official`,
+    description: `Provee el mejor servicio para la digitalización de su empresa`,
+    author: `Null Systems`,
+    url: `https://www.null-systems.com`,
+    image: `./images/favicon-sqrt.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -49,7 +51,6 @@ module.exports = {
         threshold: 1, // Percentage of an element's area that needs to be visible to launch animation
         once: true, // Defines if animation needs to be launched once
         disable: false, // Flag for disabling animations
-
         // Advanced Options
         selector: "[data-sal]", // Selector of the elements to be animated
         animateClassName: "sal-animate", // Class name which triggers animation

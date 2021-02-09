@@ -1,5 +1,6 @@
 import React from "react"
 import Navbar from "./navbar"
+import Footer from "../layout/footer"
 
 import { createGlobalStyle } from "styled-components"
 import PropTypes from "prop-types"
@@ -25,7 +26,7 @@ const layout = ({ children }) => (
     <GlobalStyle />
     <Navbar />
     <main>{children}</main>
-    <footer></footer>
+    <Footer></Footer>
   </>
 )
 layout.propTypes = {

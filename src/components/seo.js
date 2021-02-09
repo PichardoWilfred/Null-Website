@@ -12,6 +12,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            image
           }
         }
       }
@@ -19,19 +20,20 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      title={title || site.siteMetadata.title}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: `Como empresa y seres humanos, creemos en un mejor futuro para la economía
+          de República Dominicana y Latinoamérica, por eso impulsamos el desarrollo de toda 
+          clase de empresas para que con ayuda de la tecnología, puedan llegar a cada vez más
+           personas y revolucionar los maravillosos servicios que las mismas ofrecen.`,
         },
         {
           property: `og:title`,
@@ -42,8 +44,8 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: `og:image`,
+          content: site.siteMetadata?.image,
         },
         {
           name: `twitter:card`,
@@ -76,7 +78,6 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
 }
 
 export default SEO

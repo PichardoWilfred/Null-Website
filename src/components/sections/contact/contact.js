@@ -45,7 +45,7 @@ const Title = styled.h1`
   padding-bottom: 0.5rem;
   text-align: center;
   @media ${device.tablet} {
-    padding: 0 0;
+    padding: 0.8rem 0rem;
     text-align: center;
   }
 `
