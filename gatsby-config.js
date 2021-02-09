@@ -30,18 +30,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Montserrat`,
-            variants: [`200`, `300`, `500`, `400`, `600`],
-          },
-          {
-            family: `Open Sans`,
-            variants: [`400`, `700`],
-          },
-        ],
+        fonts: ["Montserrat:200, 300,400,500,600,700"],
       },
     },
     `gatsby-plugin-styled-components`,
