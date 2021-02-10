@@ -2,10 +2,18 @@ import React from "react"
 import styled, { css } from "styled-components"
 import { device } from "../../../layout/responsive/device"
 
-export function Input({ err, form_reference, name, placeholder, bold, big }) {
+export function Input({
+  err,
+  form_reference,
+  name,
+  placeholder,
+  bold,
+  big,
+  size,
+}) {
   return (
     <>
-      <NullInput__container big={big}>
+      <NullInput__container big={big} bold={bold} size={size}>
         {bold && <NullInput__Label>No obligatorio</NullInput__Label>}
         {!big ? (
           <Null_Input
@@ -30,8 +38,12 @@ export function Input({ err, form_reference, name, placeholder, bold, big }) {
 const NullInput__container = styled.div`
   display: flex;
   flex-direction: column;
-  height: ${props => (props.big ? "355px" : "97px")};
-  margin-bottom: 1rem;
+  height: ${props => props.size.desktop};
+  @media ${device.tablet} {
+    height: ${props => props.size.mobile};
+    margin-bottom: 0.9em;
+  }
+  margin-bottom: 0.9em;
 `
 
 const border_size = "1.8px"
@@ -61,7 +73,7 @@ const NullInput__Styles = css`
   }
 `
 const NullInput__Error = styled.label`
-  padding: 0.5rem 0rem 0rem 0.2rem;
+  padding: 0.3rem 0rem 0rem 0.2rem;
   font-size: min(1em, 12px);
   visibility: visible;
 `

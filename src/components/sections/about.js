@@ -17,15 +17,6 @@ export default function About() {
           data-sal-easing="ease"
         />
         <Text data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">
-          {/* Creemos en un mejor futuro para la economía de
-          <strong> República Dominicana</strong> y Latinoamérica, por eso
-          impulsamos el desarrollo de toda clase de empresas para que con ayuda
-          de la tecnología, puedan llegar a cada vez más personas y revolucionar
-          los maravillosos servicios que las mismas ofrecen.
-          <br /> <br />
-          Nos enorgullece tener una cultura de honestidad y transparencia en
-          todo lo que ofrecemos, desde nuestros servicios más técnicos a nuestro
-          trato con las personas. */}
           Somos una empresa que además de <strong>desarrollar software </strong>
           y<strong> páginas web</strong>, brindamos
           <strong> soporte y reparación de equipos informáticos.</strong>

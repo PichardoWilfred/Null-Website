@@ -16,6 +16,7 @@ export default function Form({ handler }) {
       bold: true,
       placeholder: "Empresa",
       name: "enterprice",
+      size: { mobile: "90px", desktop: "85px" },
       form_reference: register({
         minLength: { value: 4, message: "Mínimo 4 caracteres" },
         maxLength: { value: 120, message: "Máximo 120 caracteres" },
@@ -24,6 +25,7 @@ export default function Form({ handler }) {
     {
       placeholder: "Nombre del contacto",
       name: "name",
+      size: { mobile: "75px", desktop: "65px" },
       form_reference: register({
         required: "Este campo es requerido.",
         minLength: { value: 10, message: "Mínimo 10 caracteres." },
@@ -33,6 +35,7 @@ export default function Form({ handler }) {
     {
       placeholder: "Correo electrónico",
       name: "mail",
+      size: { mobile: "75px", desktop: "65px" },
       form_reference: register({
         required: "Este campo es requerido.",
         pattern: {
@@ -44,6 +47,7 @@ export default function Form({ handler }) {
     {
       placeholder: "Descripción del proyecto",
       name: "desc",
+      size: { mobile: "355px", desktop: "355px" },
       form_reference: register({
         required: "Este campo es requerido.",
         minLength: { value: 40, message: "Mínimo 40 caracteres." },
@@ -56,11 +60,12 @@ export default function Form({ handler }) {
   return (
     <Form__contact autoComplete="off" onSubmit={handleSubmit(handler)}>
       {form_attr.map(
-        ({ big, bold, placeholder, name, form_reference }, index) => {
+        ({ big, bold, placeholder, name, form_reference, size }, index) => {
           return (
             <Input
               big={big}
               bold={bold}
+              size={size}
               placeholder={placeholder}
               name={name}
               form_reference={form_reference}
@@ -97,7 +102,6 @@ const fade_out = keyframes`
     color: black;
   }
 `
-
 const fade_in = keyframes`
   from {
     border: 2px solid black;
@@ -114,7 +118,6 @@ const fade_in = keyframes`
   }
 `
 const ButtonInput = styled.button`
-  margin-top: 2rem;
   padding: 0.7rem;
 
   font-size: 1em;

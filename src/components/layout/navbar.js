@@ -14,10 +14,12 @@ export default function Navbar() {
       const currentScrollPos = window.pageYOffset
       if (!showNav)
         setHeaderShow(prevScrollPos > currentScrollPos || currentScrollPos < 50)
-
+      //when we scroll down OR we don't scroll so much we activate the 'headerShow' boolean
       setPrevScrollPos(currentScrollPos)
+      //change the main scroll position
     }
     window.addEventListener("scroll", handleScroll)
+    //code above will we applied whenever we scroll up or down our page
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }

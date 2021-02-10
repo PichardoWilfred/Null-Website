@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { device } from "../../layout/responsive/device"
 import Form from "./forms/form"
-//email-handler
+//Email-Handler
 import emailjs from "emailjs-com"
 
 export default function Contact() {
