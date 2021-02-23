@@ -26,7 +26,7 @@ export default function About() {
           el funcionamiento de las mismas se ve afectada por las estructura de
           sus sistemas de información, por eso es que, antes del interés por el
           beneficio económico, nos interesa proporcionar un
-          <strong>servicio de calidad</strong> que resulte efectivo dentro de
+          <strong> servicio de calidad</strong> que resulte efectivo dentro de
           los objetivos que se establezcan.
           <br />
           <br />
@@ -90,6 +90,6 @@ const Text = styled.p`
   @media ${device.tablet} {
     text-align: justify;
     width: 100%;
-    font-size: 12px;
+    font-size: 15px;
   }
 `

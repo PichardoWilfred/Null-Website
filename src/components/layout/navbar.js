@@ -6,6 +6,7 @@ import { Link, animateScroll as scroll } from "react-scroll" //scrolling options
 
 export default function Navbar() {
   const [showNav, setShowNav] = useState(false) //toggle mobile navbar
+  //navbar hide
   const [headerShow, setHeaderShow] = useState(true) //hide navbar on scroll
   const [prevScrollPos, setPrevScrollPos] = useState(0)
 
@@ -13,6 +14,7 @@ export default function Navbar() {
     function handleScroll() {
       const currentScrollPos = window.pageYOffset
       if (!showNav)
+        //only if the mobile-nav extension is closed
         setHeaderShow(prevScrollPos > currentScrollPos || currentScrollPos < 50)
       //when we scroll down OR we don't scroll so much we activate the 'headerShow' boolean
       setPrevScrollPos(currentScrollPos)
@@ -159,7 +161,6 @@ const NLink = styled(Link)`
 
   &:active {
     transition: all 0.2s;
-    background-color: #222222;
   }
 
   @media (min-width: 768px) {

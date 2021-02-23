@@ -24,7 +24,6 @@ const fade_in_bottom = keyframes`
   to {
     opacity:1;  
     transform: translateY(0);
-
   }
 `
 const fade_in = keyframes`

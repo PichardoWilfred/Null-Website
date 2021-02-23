@@ -5,8 +5,9 @@ import { device } from "../../../layout/responsive/device"
 import { useForm } from "react-hook-form"
 //Importing Inputs
 import { Input } from "./inputs"
+import { css } from "styled-components"
 
-export default function Form({ handler }) {
+export default function Form({ handler, blinkState }) {
   const { register, errors, handleSubmit } = useForm({
     mode: "onTouched",
   })
@@ -58,7 +59,11 @@ export default function Form({ handler }) {
   ]
 
   return (
-    <Form__contact autoComplete="off" onSubmit={handleSubmit(handler)}>
+    <Form__contact
+      autoComplete="off"
+      onSubmit={handleSubmit(handler)}
+      blinkState={blinkState}
+    >
       {form_attr.map(
         ({ big, bold, placeholder, name, form_reference, size }, index) => {
           return (
@@ -79,15 +84,31 @@ export default function Form({ handler }) {
     </Form__contact>
   )
 }
+
+const blink = keyframes`
+  from {
+    opacity:0;
+  }
+
+  to {
+    opacity:1;
+  }
+`
+const was_sended = css`
+  animation: ${blink} 1500ms ease-out;
+`
 const Form__contact = styled.form`
   display: flex;
   padding: 1rem 3rem;
   flex-flow: column wrap;
   width: clamp(4rem, 90%, 60rem);
+  height: 20%;
   @media ${device.tablet} {
     padding: 0 0;
   }
+  ${props => (props.blinkState ? was_sended : "")}
 `
+
 const fade_out = keyframes`
   from {
     border: 2px solid white;
@@ -107,8 +128,6 @@ const fade_in = keyframes`
     border: 2px solid black;
     background-color: white;
     color: black;
-
-
   }
 
   to {
