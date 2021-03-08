@@ -52,7 +52,6 @@ export default function Services() {
           )
         })}
       </Container>
-      {/* <Service service={services} /> */}
     </Section>
   )
 }

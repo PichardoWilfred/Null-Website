@@ -12,7 +12,6 @@ export function Input({
   size,
 }) {
   return (
-    <>
       <NullInput__container big={big} bold={bold} size={size}>
         {bold && <NullInput__Label>No obligatorio</NullInput__Label>}
         {!big ? (
@@ -31,7 +30,7 @@ export function Input({
         )}
         <NullInput__Error>{err[name]?.message}</NullInput__Error>
       </NullInput__container>
-    </>
+   
   )
 }
 
