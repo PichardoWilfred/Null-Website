@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 131.08 79.61">
+<defs>
+<style>.cls-1{fill:url(#Degradado_sin_nombre_135);}.cls-2{fill:url(#Degradado_sin_nombre_51);}.cls-3{fill:url(#Degradado_sin_nombre_40);}</style>
+<linearGradient id="Degradado_sin_nombre_135" x1="65.72" y1="106.74" x2="65.41" y2="-10.48" gradientUnits="userSpaceOnUse">
+<stop offset="0.2" stop-color="#0097a7"/>
+<stop offset="0.25" stop-color="#0d9eb4"/>
+<stop offset="0.4" stop-color="#31b2d9"/>
+<stop offset="0.52" stop-color="#47bfef"/>
+<stop offset="0.6" stop-color="#4fc3f7"/>
+</linearGradient>
+<linearGradient id="Degradado_sin_nombre_51" x1="65.05" y1="784.71" x2="66.13" y2="628.98" gradientTransform="matrix(1, 0, 0, -1, 0, 729.79)" gradientUnits="userSpaceOnUse">
+<stop offset="0.45" stop-color="#84ffff"/>
+<stop offset="0.9" stop-color="#03b9d5"/>
+<stop offset="0.91" stop-color="#00b8d4"/>
+</linearGradient>
+<linearGradient id="Degradado_sin_nombre_40" x1="64.27" y1="188.86" x2="65.63" y2="-7.85" gradientUnits="userSpaceOnUse">
+<stop offset="0.56" stop-color="#64b5f6"/>
+<stop offset="0.91" stop-color="#1e88e5"/>
+</linearGradient>
+</defs>
+<title>Recurso 17</title>
+<g id="Capa_2" data-name="Capa 2">
+<g id="Capa_4" data-name="Capa 4">
+<g id="mailIcon_redesign">
+<path class="cls-1" d="M65.83,47.51.71,5.07a.41.41,0,0,0-.63.27A5.86,5.86,0,0,0,0,6.28v67a6.37,6.37,0,0,0,6.37,6.37H124.72a6.37,6.37,0,0,0,6.36-6.37v-67a6,6,0,0,0-.08-1L66.27,47.51A.43.43,0,0,1,65.83,47.51Z"/>
+<path class="cls-2" d="M131,75.54c-.46,2.31-2.89,4.07-5.84,4.07H6.74a6.25,6.25,0,0,1-5.83-4L58.34,43.81a15.14,15.14,0,0,1,14.69,0Z"/>
+<path class="cls-3" d="M130.82,5.9a.47.47,0,0,0,.2-.5c-.58-2.74-3-5.4-5.9-5.4H5.2C2.44,0,.73,2.78.05,5.33h0L57.89,45.39a12.89,12.89,0,0,0,14.79,0Z"/>
+</g>
+</g>
+</g>
+</svg>

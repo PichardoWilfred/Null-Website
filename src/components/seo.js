@@ -33,7 +33,7 @@ function SEO({ description, lang, meta, title }) {
           content: `Como empresa y seres humanos, creemos en un mejor futuro para la economía
           de República Dominicana y Latinoamérica, por eso impulsamos el desarrollo de toda 
           clase de empresas para que con ayuda de la tecnología, puedan llegar a cada vez más
-           personas y revolucionar los maravillosos servicios que las mismas ofrecen.`,
+          personas y revolucionar los maravillosos servicios que las mismas ofrecen.`,
         },
         {
           property: `og:title`,

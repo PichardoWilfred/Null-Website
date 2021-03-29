@@ -4,7 +4,7 @@ module.exports = {
     description: `Provee el mejor servicio para la digitalización de su empresa`,
     author: `Null Systems`,
     url: `https://www.null-systems.com`,
-    image: `./images/favicon-sqrt.png`,
+    image: `src/images/favicon-sqrt.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
