@@ -15,7 +15,7 @@ export default function Footer() {
         <SocialMedia__element>
           <SocialMedia__Icon src={Wsp} alt="Ig" />
           <SocialMedia__Info>
-            <Line>(829) 715-2892</Line>
+            <Line>(829) 677-3778</Line>
             <Line>(829) 651-6034</Line>
           </SocialMedia__Info>
         </SocialMedia__element>
