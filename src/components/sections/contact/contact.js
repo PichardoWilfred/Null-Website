@@ -8,7 +8,7 @@ import emailjs from "emailjs-com"
 export default function Contact() {
   const [blink, setBlink] = useState(false)
 
-  const sendData = (data, e) => {
+  const sendData = e => {
     emailjs
       .sendForm(
         "service_5b1kisi",
@@ -26,6 +26,7 @@ export default function Contact() {
         }
       )
   }
+
   return (
     <Section id="contact">
       <Title>CONTÁCTANOS</Title>

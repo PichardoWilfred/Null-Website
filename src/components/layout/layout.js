@@ -17,8 +17,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: clamp(14px, 4vw, 2.4rem);
   }
-
-  
 `
 
 const layout = ({ children }) => (

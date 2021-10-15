@@ -11,6 +11,7 @@ export default function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0)
 
   useEffect(() => {
+    //inside callback for it to not re-create every time the component is rendered
     function handleScroll() {
       const currentScrollPos = window.pageYOffset
       if (!showNav)
@@ -25,7 +26,7 @@ export default function Navbar() {
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
-  }, [showNav, prevScrollPos, headerShow])
+  }, [showNav, prevScrollPos, headerShow]) //the function will only run when this is called
 
   return (
     <Header showThis={headerShow}>

@@ -12,25 +12,24 @@ export function Input({
   size,
 }) {
   return (
-      <NullInput__container big={big} bold={bold} size={size}>
-        {bold && <NullInput__Label>No obligatorio</NullInput__Label>}
-        {!big ? (
-          <Null_Input
-            bold={bold}
-            name={name}
-            placeholder={placeholder}
-            ref={form_reference}
-          />
-        ) : (
-          <Null_TextArea
-            name={name}
-            placeholder={placeholder}
-            ref={form_reference}
-          ></Null_TextArea>
-        )}
-        <NullInput__Error>{err[name]?.message}</NullInput__Error>
-      </NullInput__container>
-   
+    <NullInput__container big={big} bold={bold} size={size}>
+      {bold && <NullInput__Label>No obligatorio</NullInput__Label>}
+      {!big ? (
+        <Null_Input
+          bold={bold}
+          name={name}
+          placeholder={placeholder}
+          ref={form_reference}
+        />
+      ) : (
+        <Null_TextArea
+          name={name}
+          placeholder={placeholder}
+          ref={form_reference}
+        ></Null_TextArea>
+      )}
+      <NullInput__Error>{err[name]?.message}</NullInput__Error>
+    </NullInput__container>
   )
 }
 
