@@ -6,7 +6,7 @@ import { device } from "../layout/responsive/device"
 export default function About() {
   return (
     <Section>
-      <Title id="about">SOBRE NUESTRO OBJETIVO</Title>
+      <Title id="about">SOBRE NOSOTROS</Title>
 
       <Background>
         <Img
